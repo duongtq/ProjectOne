@@ -12,9 +12,9 @@ import com.esotericsoftware.kryonet.Listener;
 
 public class ClientProgram extends Listener {
 
-	static Player player = new Player();
-	static Network network = new Network();
-	static Map<Integer,MPPlayer> players = new HashMap<Integer,MPPlayer>(); 
+	private static Player player = new Player();
+	private static Network network = new Network();
+	static Map<Integer,MPPlayer> players = new HashMap<>();
 	
 	public static void main(String[] args) throws Exception {
 		Display.setDisplayMode(new DisplayMode(512,512));
