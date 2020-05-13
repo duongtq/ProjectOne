@@ -8,7 +8,6 @@ import org.lwjgl.opengl.GL11;
 
 import com.esotericsoftware.kryonet.Listener;
 
-
 public class ClientProgram2 extends Listener {
 
 	private static Player player = new Player();

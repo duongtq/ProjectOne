@@ -2,22 +2,20 @@ package client;
 
 import static client.PlayerStorage.players;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.lwjgl.opengl.GL11;
 
 import com.esotericsoftware.kryonet.Listener;
 
-
 public class ClientProgram1 extends Listener {
 
 	private static Player player = new Player();
 	private static Network network = new Network();
-<<<<<<< HEAD:saucecode-youtubeTDSClient-src/src/client/ClientProgram1.java
-=======
-	static Map<Integer,MPPlayer> players = new HashMap<>();
->>>>>>> 18c6260f160eeebeca221cbfdceb367cb80be640:saucecode-youtubeTDSClient-src/src/client/ClientProgram1.java
-	
+
 	public static void main(String[] args) throws Exception {
 		Display.setDisplayMode(new DisplayMode(512,512));
 		Display.create();
