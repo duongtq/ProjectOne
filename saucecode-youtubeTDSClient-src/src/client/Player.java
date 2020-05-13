@@ -3,7 +3,6 @@ package client;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.util.vector.Vector2f;
 
-
 class Player {
 
 	Vector2f position = new Vector2f(256,256);

@@ -1,7 +1,6 @@
 package client;
 
-import java.util.HashMap;
-import java.util.Map;
+import static client.PlayerStorage.players;
 
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
@@ -10,11 +9,10 @@ import org.lwjgl.opengl.GL11;
 import com.esotericsoftware.kryonet.Listener;
 
 
-public class ClientProgram extends Listener {
+public class ClientProgram1 extends Listener {
 
-	static Player player = new Player();
-	static Network network = new Network();
-	static Map<Integer,MPPlayer> players = new HashMap<Integer,MPPlayer>(); 
+	private static Player player = new Player();
+	private static Network network = new Network();
 	
 	public static void main(String[] args) throws Exception {
 		Display.setDisplayMode(new DisplayMode(512,512));
@@ -43,7 +41,7 @@ public class ClientProgram extends Listener {
 		System.exit(0);
 	}
 	
-	public static void update(){
+	private static void update(){
 		player.update();
 		
 		//Update position
@@ -65,7 +63,7 @@ public class ClientProgram extends Listener {
 		}
 	}
 	
-	public static void render(){
+	private static void render(){
 		//Render player
 		GL11.glColor3f(1,1,1);
 		GL11.glBegin(GL11.GL_TRIANGLES);

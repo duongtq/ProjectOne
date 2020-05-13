@@ -32,20 +32,19 @@ public class Network extends Listener {
 		if(o instanceof PacketAddPlayer){
 			PacketAddPlayer packet = (PacketAddPlayer) o;
 			MPPlayer newPlayer = new MPPlayer();
-			ClientProgram.players.put(packet.id, newPlayer);
+			PlayerStorage.players.put(packet.id, newPlayer);
 			
 		}else if(o instanceof PacketRemovePlayer){
 			PacketRemovePlayer packet = (PacketRemovePlayer) o;
-			ClientProgram.players.remove(packet.id);
+			PlayerStorage.players.remove(packet.id);
 			
 		}else if(o instanceof PacketUpdateX){
 			PacketUpdateX packet = (PacketUpdateX) o;
-			ClientProgram.players.get(packet.id).setX(packet.x);
+			PlayerStorage.players.get(packet.id).setX(packet.x);
 			
 		}else if(o instanceof PacketUpdateY){
 			PacketUpdateY packet = (PacketUpdateY) o;
-			ClientProgram.players.get(packet.id).setY(packet.y);
-			
+			PlayerStorage.players.get(packet.id).setY(packet.y);
 		}
 	}
 }
